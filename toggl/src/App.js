@@ -1,9 +1,14 @@
 import './App.css';
+import ForgotPassword from './components/ForgotPassword';
+import Login from './Page/Login';
+import Signup from './Page/Signup';
 
 function App() {
   return (
     <div className="App">
-      <h1>Lets start</h1>
+      {/* <Signup /> */}
+      <Login />
+      {/* <ForgotPassword /> */}
     </div>
   );
 }
