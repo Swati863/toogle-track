@@ -1,0 +1,40 @@
+.Navbar{
+    background:#2c1338;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+}
+.Navbar a svg{
+    width: 13rem;
+}
+.left  div{
+    display: flex;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+.left  div svg{
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-top: 0.3rem;
+}
+.right p{
+    font-weight: 600;
+}
+.left div:hover,.right p:hover{
+    color:#e57cd8 ;
+    fill: #e57cd8 ;
+}
+.roundBtn{
+    background: #fce5d8;
+    border-radius: 3rem;
+    padding: 0.85rem 2.5rem;
+    color: #e57cd8;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 200ms ease-in-out ;
+}
+.roundBtn:hover{
+    background: #563d66;
+}
