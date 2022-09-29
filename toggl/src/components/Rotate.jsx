@@ -1,13 +1,13 @@
-import { Text } from '@chakra-ui/react'
+import { NumberInputStepper, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const Rotate = ({ word }) => {
+const Rotate = ({ word, Color = 'white' }) => {
     word = word.split("");
-    console.log(word);
+
     return (
-        <span style={{ display: 'inline-flex', color: '#e57cd8 ' }}>
+        <span style={{ display: 'inline-flex', color: Color }}>
             {word.map((el) => {
-                return <span style={{ display: 'block', rotate: '13deg' }}>{el}</span>
+                return <span style={{ display: 'block', rotate: '13deg' }}> {el}</span>
             })}
 
         </span>
