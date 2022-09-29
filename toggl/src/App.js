@@ -1,9 +1,12 @@
 import './App.css';
+import Faqs from './Faqs';
+import Footer from './Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-      <h1>Lets start</h1>
+      <Faqs />
+      {/* <Footer /> */}
     </div>
   );
 }
