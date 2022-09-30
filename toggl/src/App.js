@@ -6,6 +6,7 @@ import Footer from './Footer/Footer';
 import ForgotPassword from './components/ForgotPassword';
 import Login from './Page/Login';
 import Signup from './Page/Signup';
+import AllRoutes from './Router/AllRoutes';
 
 import AllRoutes from './routes/AllRoutes';
 
@@ -19,9 +20,9 @@ function App() {
   return (
     <div className="App">
 
+      <AllRoutes />
       <Faqs />
       {/* <Footer /> */}
-
 
       {/* <Signup /> */}
       <Login />
@@ -29,7 +30,6 @@ function App() {
         <AllRoutes/>
    <TopNavbar />
       <Features />
-
     </div>
   );
 }

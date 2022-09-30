@@ -9,16 +9,23 @@ import {
     FormErrorMessage,
     Input,
     VStack,
-    Text
+    Text,
+    InputGroup,
+    InputRightElement,
+    Center
 } from "@chakra-ui/react";
 import { useUserContext } from '../Context/userContext';
+import { useToast } from '@chakra-ui/react'
+import { BiHide, BiShow } from "react-icons/bi"
 
-const Form = ({ title, display }) => {
+const Form = ({ title }) => {
 
     const [data, setData] = useState({ email: "", password: "" });
+    const [show, setShow] = React.useState(false)
+    const handleClick = () => setShow(!show)
 
     const { signupUser, user } = useUserContext()
-    console.log(user)
+
 
     return (
         <Flex align="center" justify="center" my={5}>
@@ -63,27 +70,34 @@ const Form = ({ title, display }) => {
                                 </FormControl>
                                 <FormControl isInvalid={!!errors.password && touched.password}>
                                     <FormLabel htmlFor="password">Password</FormLabel>
-                                    <Field
-                                        as={Input}
-                                        id="password"
-                                        name="password"
-                                        type="password"
-                                        size='lg'
-                                        border="2.5px solid black"
-                                        _hover={{ background: "#ffebd7", color: "black" }}
-                                        validate={(value) => {
-                                            let error;
+                                    <InputGroup>
+                                        <Field
+                                            as={Input}
+                                            id="password"
+                                            name="password"
+                                            type={show ? 'text' : 'password'}
+                                            size='lg'
+                                            border="2.5px solid black"
+                                            _hover={{ background: "#ffebd7", color: "black" }}
+                                            validate={(value) => {
+                                                let error;
 
-                                            if (value.length < 7) {
-                                                error = "Password must contain at least 8 characters";
-                                            }
+                                                if (value.length < 7) {
+                                                    error = "Password must contain at least 8 characters";
+                                                }
 
-                                            return error;
-                                        }}
-                                    />
+                                                return error;
+                                            }}
+                                        />
+                                        <InputRightElement width='4.5rem'  >
+                                            <Center fontSize="30px" pt={2} bg="none" onClick={handleClick}>
+                                                {show ? <BiHide color='white' /> : <BiShow color='white' bg="white" />}
+                                            </Center>
+                                        </InputRightElement>
+                                    </InputGroup>
                                     <FormErrorMessage>{errors.password}</FormErrorMessage>
                                 </FormControl>
-                                <Button h="48px" type="submit" bg="#E57CD8" width="full" borderRadius="3xl">
+                                <Button h="48px" type="submit" bg="#E57CD8" width="full" borderRadius="3xl" _hover={{ bg: "#640090" }}>
                                     {title}
                                 </Button>
                             </VStack>
