@@ -1,4 +1,4 @@
-import { NumberInputStepper, Text } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 import React from 'react'
 
 const Rotate = ({ word, Color = 'white' }) => {
@@ -9,9 +9,6 @@ const Rotate = ({ word, Color = 'white' }) => {
             {word.map((el) => {
                 return <span style={{ display: 'block', rotate: '13deg' }}> {el}</span>
             })}
+)
 
-        </span>
-    )
-}
-
-export default Rotate
+export default Rotate;
