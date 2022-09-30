@@ -1,5 +1,7 @@
 
 import './App.css';
+import Faqs from './Faqs';
+import Footer from './Footer/Footer';
 
 import ForgotPassword from './components/ForgotPassword';
 import Login from './Page/Login';
@@ -16,6 +18,10 @@ import TopNavbar from "./components/TopNavbar";
 function App() {
   return (
     <div className="App">
+
+      <Faqs />
+      {/* <Footer /> */}
+
 
       {/* <Signup /> */}
       <Login />
