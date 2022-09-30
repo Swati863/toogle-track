@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import Form from '../components/SignupForm'
 import LogoButton from '../components/LogoButton'
 import { useUserContext } from '../Context/userContext'
-import Styles from "./Signup.module.css"
+
 
 const Signup = () => {
 
