@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Image, Input, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Form from '../components/SignupForm'
 import LogoButton from '../components/LogoButton'
 import { useUserContext } from '../Context/userContext'
@@ -9,15 +9,15 @@ import Styles from "./Signup.module.css"
 const Signup = () => {
 
     const { user } = useUserContext();
-    console.log(user.displayName)
-    console.log(user.email)
+
+
 
     return (
         <Box bg="#2C1338" >
             <Box p={12}>
                 <Image w="13%" src="https://toggl.com/blog/wp-content/uploads/2020/09/toggl-track_logotype_horizontal_pink_rgb-e1599116263835.png" />
             </Box>
-            <Box textAlign="left" w="80%" m="auto">
+            <Box textAlign="left" w="80%" m="auto" color="white">
                 <Heading size="2xl">Sign up for a <span style={{ color: "#E57CD8" }}>𝙛𝙧𝙚𝙚</span>  Toggl Track account</Heading>
 
                 <Text fontSize="xl" mt={10}>All plans come with a free, 30-day trial of Toggl Track Premium—no credit card required.
@@ -26,10 +26,10 @@ const Signup = () => {
                 </Text>
 
                 <Text fontSize="xl" my={4}>Already have an account?
-                    <NavLink style={{ color: "#E57CD8", marginLeft: "5px", textDecoration: "underline" }} to="login">Log in here.</NavLink>
+                    <NavLink style={{ color: "#E57CD8", marginLeft: "5px", textDecoration: "underline" }} to="/login" >Log in here.</NavLink>
                 </Text>
             </Box>
-            <SimpleGrid columns={[1, 2]} spacing={10} w="80%" m="auto" my={14} >
+            <SimpleGrid columns={[1, 2]} spacing={10} w="80%" m="auto" my={14} color="white">
                 <Box bg="#2C1118" textAlign="left" p={5} py={14} >
                     <Flex justify="space-around">
                         <LogoButton logo="https://img.icons8.com/color/452/google-logo.png" title="Sign up via google" />

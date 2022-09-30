@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Button, Heading, Input, Text } from '@chakra-ui/react'
+import { AspectRatio, Box, Button, Heading, Input, Text, useToast } from '@chakra-ui/react'
 import React, { useEffect, useRef, useState } from 'react'
 import { useUserContext } from '../Context/userContext'
 import Styles from "./Video.module.css"
@@ -6,7 +6,8 @@ import Styles from "./Video.module.css"
 const ForgotPassword = () => {
 
     const [email, setEmail] = useState("")
-    const { forgotPassword } = useUserContext()
+    const { forgotPassword, logoutUser, user, error } = useUserContext()
+
 
     const vidRef = useRef(null);
 
@@ -16,10 +17,7 @@ const ForgotPassword = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (email) {
-            forgotPassword(email)
-        }
-        console.log(email)
+        forgotPassword(email)
     }
 
     useEffect(() => { vidRef.current.play(); }, []);
@@ -48,6 +46,7 @@ const ForgotPassword = () => {
                         <Button w="90%" h="48px" type="submit" bg="#E57CD8" borderRadius="3xl">
                             Reset Password
                         </Button>
+                        <Button onClick={logoutUser}>Logout</Button>
                     </form>
                 </Box>
             </Box>
