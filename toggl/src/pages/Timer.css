@@ -1,0 +1,22 @@
+.addProject>div>svg{
+    cursor: pointer;
+}
+.showWeek svg{
+    cursor: pointer;
+}
+svg{
+    cursor:'pointer'
+}
+/* .buttonAni{
+transition: transform 0.5s ease-in-out;
+}
+.buttonAni:hover{
+    transform: scale(1.1);
+} */
+.Weeks >div{
+    /* border: 1px solid; */
+    /* padding: 0.1rem 3.6rem; */
+    width: 11rem;
+    padding: 0.1rem 0.9rem;
+    margin-left: 0rem;
+}
