@@ -1,0 +1,151 @@
+
+/* NAVBAR- CSS */
+
+.main1_div{
+    display : flex;
+    justify-content: space-between;
+    border-bottom:1px solid grey;
+    background-color:rgb(252, 229, 216);
+    padding: 20px;
+    gap:90px;
+}
+.left_div{
+    display : flex;
+    justify-content: space-evenly;
+    gap:8px;
+    /* border:1px solid ; */
+     align-items: center;
+     
+}
+.left_div >div {
+    margin: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height : 26px;
+    
+    
+}
+
+.left_div >div :hover {
+    color: grey;
+    text-decoration: underline;
+}
+.img1{
+    width: 200px;
+    height: 50px;
+}
+
+
+.right_div{
+    display : flex;
+    justify-content: space-evenly;
+    gap:30px;
+    /* border:1px solid ; */
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+}
+
+.button_div{
+    background-color: rgb(229,124,216);
+    padding: 15px 25px 15px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    border: none;
+
+}
+.button_div:hover{
+    background-color: rgb(44,19,56);
+   color: white;
+
+}
+
+h3{
+    font-weight: 400;
+   
+}
+
+
+
+
+
+
+/* Why-Track CSS */
+.main2_div{
+    display:block;
+    gap:20px;
+    background-color:rgb(252, 229, 216);
+    padding: 30px;
+    /* border: 1px solid; */
+    
+
+}
+
+.first_div{
+    /* border: 1px solid; */
+    padding: 5px;
+    color: grey;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "GT Haptik Medium Rotalic", sans-serif;
+
+}
+
+.second_div{
+    /* border: 1px solid; */
+    width: 80%;
+    display: flex;
+    justify-items: flex-start;
+    gap:30px;
+    margin:20px 20px 20px 10px ;
+
+}
+.individual_div {
+    /* border: 1px solid; */
+    width:35%;
+    padding:5px;
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+.individual_text_div{
+    line-height: 1px;
+    
+}
+.individual_text_div > a{
+color: black;
+text-decoration: none;
+    
+}
+
+.individual_text_div > a:hover{
+    font-family: cursive;
+    cursor: pointer;
+        
+    }
+/* .individual_text_div >h3:hover{
+    font-family: cursive;
+    cursor: pointer;
+} */
+
+.individual_text_div > p{
+    line-height: 15px;
+    color:grey;
+}
+
+
+.third_div{
+    /* border: 1px solid; */
+    padding: 5px;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: white;
+    font-family: "GT Haptik Medium Rotalic", sans-serif;
+    padding-left: 50px;
+
+}
+.third_div:hover{
+    background-color: rgb(247, 216, 243) ;
+    font-family: cursive;
+    cursor: pointer;
+}

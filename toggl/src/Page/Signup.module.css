@@ -1,0 +1,10 @@
+.input {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid white;
+}
+
+.input:focus {
+    background-color: #faebd7;
+    color: black;
+}
