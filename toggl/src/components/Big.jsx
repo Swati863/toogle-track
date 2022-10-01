@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 
-const Solo = () => {
+const Big = () => {
   return (
     <div className={style.main_div}>
       {/* 1st pic div */}
@@ -25,7 +25,7 @@ const Solo = () => {
             color="#fff3ed"
           >
           
-            Accurate, Beautiful Time Tracking. It's Simple.
+          Time Will Tell (If You Track It)
           </Container>
           <Text
             margin="30px"
@@ -35,8 +35,7 @@ const Solo = () => {
             lineHeight="27px"
             color="#fff3ed"
           >
-            Toggl Track is here to save your time—so you can spend it where you
-            want to. That’s our singular focus.
+          Toggl Track is here to save your time—so you can spend it where you want to. That’s our singular focus.
           </Text>
           <Button
             margin="20px"
@@ -52,7 +51,7 @@ const Solo = () => {
         </Box>
         <Box
           width="100%"
-          backgroundImage="https://public-assets.toggl.space/58c88da8-9f59-4fb5-ae83-1ebcfa063516/static/8d06ace628e1cadfc31838320c477118/0fc98/hero-freelancers.avif"
+          backgroundImage="https://public-assets.toggl.space/58c88da8-9f59-4fb5-ae83-1ebcfa063516/static/79e1ffc8fb5fba4debd371fb0ef251d8/c4eba/hero-large-teams.avif"
         >
           {/* <Image align="objectFit" width="800px" htmlHeight ="800px" src='https://public-assets.toggl.space/58c88da8-9f59-4fb5-ae83-1ebcfa063516/static/8d06ace628e1cadfc31838320c477118/0fc98/hero-freelancers.avif' alt='laptop' /> */}
         </Box>
@@ -70,8 +69,7 @@ const Solo = () => {
             lineHeight="58px"
             color="#2c1338"
           >
-            With beautiful reports and easy customization, you'll never lose a
-            minute of your <i> creative time </i>
+          Save time, manage your team, and plan better. All with just a few clicks.
           </Text>
 
           <Text
@@ -83,8 +81,7 @@ const Solo = () => {
             lineHeight="27px"
             color="#2c1338"
           >
-            We know that when you work as a team of one, every moment is
-            mission-critical. That's where Track comes in.
+          Time is the most powerful force in the universe. Toggl Track helps you harness it. Listen closely: your minutes are telling an important story.
           </Text>
         </Box>
       </Stack>
@@ -104,7 +101,7 @@ const Solo = () => {
             lineHeight="42px"
             color="#2c1338"
             >
-         Understand how long projects really take
+         Drive discovery with data
          
           </Text>
 
@@ -115,7 +112,7 @@ const Solo = () => {
             lineHeight="27px"
             color="#2c1338"
             >
-          What you think your workday looks like isn't what it actually looks like. To really understand where your time goes, Track does the hard work for you.
+          You used to have ideas about where your time goes. Now you have proof. With data-driven insights, Track shows whether your expectations match the reality. Because we only like surprises at birthday parties.
           </Text>
 
         </Box>
@@ -124,9 +121,9 @@ const Solo = () => {
         </Box>
 </SimpleGrid>
          {/* 3-4 box in grid */}
-         <SimpleGrid columns={2} spacing="150px" margin="30px 300px 80px 250px">
+         <SimpleGrid columns={2} spacing="200px" margin="30px 300px 80px 250px">
          <Box align="left" >
-          <Image width="550" height="477"  src="https://public-assets.toggl.space/58c88da8-9f59-4fb5-ae83-1ebcfa063516/static/1d75f67b9bac69fe63a659873978936a/af3f3/feature-time-entries.avif"/>
+          <Image width="400" height="415"  src="https://public-assets.toggl.space/58c88da8-9f59-4fb5-ae83-1ebcfa063516/static/4903ee711944ad74a04a462a3eee0a89/8fa3d/feature-team-dashboard.avif"/>
         </Box>
         <Box align="left" margin-left="250px" padding-top="80px">
           <Image width="45" height="45" src="https://public-assets.toggl.space/58c88da8-9f59-4fb5-ae83-1ebcfa063516/static/66f27591a1bb8c35eb25b463d69b9073/73ddc/icon-money-dark.avif"  />
@@ -138,7 +135,7 @@ const Solo = () => {
             lineHeight="42px"
             color="#2c1338"
             >
-        Create accurate invoices easily
+        Stay on track, automatically
          
           </Text>
 
@@ -149,7 +146,7 @@ const Solo = () => {
             lineHeight="27px"
             color="#2c1338"
             >
-         There’s no dread like end-of-the-month, time-to-create-invoices dread. Toggl Track takes your hours logged, and turns them into clean reports. You’ll know exactly where you spent your time—and how to bill it—cha-ching!
+        Why spend man-hours on admin and compliance? Automate with Track. Whether you're navigating GDPR or your own internal standards—Track has you covered. Track's simple, breezy interface delivers powerful, enterprise-level reporting.
           </Text>
         </Box>
        
@@ -169,7 +166,7 @@ const Solo = () => {
             lineHeight="42px"
             color="#2c1338"
             >
-         Stay accountable every day
+        Be a well-oiled machine
          
           </Text>
 
@@ -180,7 +177,7 @@ const Solo = () => {
             lineHeight="27px"
             color="#2c1338"
             >
-          Don't wait for your clients to ask, "What is it that you do all day?" Toggl Track is the easiest way to stay accountable, even when nobody's asking.
+                Banish "underworked" and "overworked" at once. Analyze your time reports and assign work to those with bandwidth. Estimate timelines and ROI, so your lightweight team packs a heavyweight punch. Because happy teams make clients even happier.
           </Text>
 
         </Box>
@@ -190,7 +187,7 @@ const Solo = () => {
 </SimpleGrid>
 
          {/* 7-8 box in grid */}
-         <SimpleGrid columns={2} spacing="150px" margin="30px 300px 80px 250px">
+         <SimpleGrid columns={2} spacing="200px" margin="30px 300px 80px 250px">
          <Box align="left" >
           <Image width="550" height="477"  src="https://public-assets.toggl.space/58c88da8-9f59-4fb5-ae83-1ebcfa063516/static/e335fd772212c6144a8f4e02609d0d0c/10316/feature-reminders.avif"/>
         </Box>
@@ -204,7 +201,7 @@ const Solo = () => {
             lineHeight="42px"
             color="#2c1338"
             >
-       Efficiency in practice
+          Bill better
          
           </Text>
 
@@ -215,7 +212,7 @@ const Solo = () => {
             lineHeight="27px"
             color="#2c1338"
             >
-         You don't need another chore. Track isn't another tool you dread opening. There's no onboarding required. Track will even remind you to pause or clock out. Because your well-being is just as important as your to-do list.
+         To bill, or not to bill? That is the question. Toggl Track is simple to use, so your billing is fast and accurate. Understand the split between billable and non-billable time for everyone on your team, and charge out accurately.
           </Text>
         </Box>
        
@@ -232,7 +229,7 @@ const Solo = () => {
         fontSize="32px"
         lineHeight="42px"
         color="white"
-       >With Toggl Track, individuals captured an additional 25% of billable hours that would otherwise be lost</Text>
+       >Studies found that daily time tracking can reduce lost hours from 23% to less than 5% (a recovery of 80%)</Text>
 
 </Box>
       </div>
@@ -242,4 +239,4 @@ const Solo = () => {
   );
 };
 
-export default Solo;
+export default Big;

@@ -81,6 +81,8 @@ function Why() {
             </div>
 
             {/* DROP-DOWN LIST ITEMS */}
+
+
             <div className={style.main2_div}>
               {/* 1st div  */}
               <div className={style.first_div}>
@@ -114,7 +116,7 @@ function Why() {
                   </div>
 
                   <div className={style.individual_text_div}>
-                    <h3>For Small Teams</h3>
+                     <a href="/Small"> <h3>For Small Teams</h3> </a>
                     <p>
                       For teams of less than 10 that need to track projects and
                       bill clients
@@ -132,7 +134,7 @@ function Why() {
                   </div>
 
                   <div className={style.individual_text_div}>
-                    <h3>For big teams</h3>
+                  <a href="/Big"> <h3>For big teams</h3></a>
                     <p>
                       For growing teams that need robust and flexible solutions
                       for time and project tracking
