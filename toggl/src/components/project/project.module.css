@@ -1,12 +1,13 @@
 .container {
   /* border: 1px solid red; */
-  width: 80%;
+  width: 88% !important;
   padding-top: 3%;
   background-color: #fef9f7;
-  margin-left: 14%;
+  margin-left: 11rem !important;
   width: auto;
   height: 100vh;
 }
+
 .top1 {
   /* border: 1px solid grey; */
   /* padding-top: 10px; */
@@ -17,10 +18,12 @@
   display: flex;
   justify-content: space-between;
 }
-.top1 > p {
+
+.top1>p {
   font-size: 18px;
   font-weight: 500;
 }
+
 .newBtn {
   background-color: #f64be2;
   padding: 5px;
@@ -30,17 +33,19 @@
   color: white;
   font-weight: 500;
 }
+
 .newBtn:hover {
   background-color: #c463ba;
 }
 
-.top2 {
+​ .top2 {
   border: 1px solid grey;
   padding: 10px 0px 10px 30px;
   background-color: #ffff;
   display: flex;
   gap: 20px;
 }
+
 .filter {
   /* border: 1px solid red; */
   font-size: 16px;
@@ -51,20 +56,24 @@
   display: flex;
   gap: 20px;
 }
-.filter > div {
+
+.filter>div {
   display: flex;
   gap: 10px;
 }
-.filter > div:hover {
+
+.filter>div:hover {
   color: black;
   cursor: pointer;
 }
+
 .top3 {
   /* border: 1px solid red; */
   margin-top: 25px;
   background-color: #ffff;
   padding: 20px;
 }
+
 .bulkBtn {
   border: 1px solid grey;
   padding: 5px;
@@ -72,6 +81,7 @@
   border-radius: 10px;
   margin-left: 15px;
 }
+
 .title {
   display: flex;
   justify-content: space-around;
@@ -79,16 +89,19 @@
   border-bottom: 1px solid grey;
   padding-bottom: 20px;
 }
-.title > div {
+
+.title>div {
   font-size: 12px;
   font-weight: bold;
   color: grey;
   display: flex;
   margin-left: -140px;
 }
-.title > div:hover {
+
+.title>div:hover {
   cursor: pointer;
 }
+
 .map {
   /* border: 1px solid red; */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -98,6 +111,7 @@
   padding: 20px 0px 20px 0px;
   background-color: #ffff;
 }
-.map > div:hover {
+
+.map>div:hover {
   cursor: pointer;
 }

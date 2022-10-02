@@ -3,33 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-<<<<<<< HEAD
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 import { Provider } from "react-redux";
-import { store } from './store';
+import { store } from './store/store';
+import { UserContextProvider } from './Context/userContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ChakraProvider>
-  <BrowserRouter>
-  <Provider store={store}>
-    <App />
-  </Provider>
-  </BrowserRouter>
-=======
-import { BrowserRouter } from 'react-router-dom';
-import { ChakraProvider } from '@chakra-ui/react'
-import { UserContextProvider } from "../src/Context/userContext"
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <ChakraProvider>
-
+  <ChakraProvider >
     <BrowserRouter>
-      <UserContextProvider>
-        <App />
-      </UserContextProvider>
+      <Provider store={store}>
+        <UserContextProvider>
+          <App />
+        </UserContextProvider>
+      </Provider>
     </BrowserRouter>
->>>>>>> 90fabf9c67543b71be65dbc63a329ce58a349ad1
   </ChakraProvider>
 
 );

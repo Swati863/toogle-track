@@ -4,7 +4,11 @@ import { SimpleGrid, Text, VStack, Button, Box, HStack } from '@chakra-ui/react'
 import { GoMail } from "react-icons/go";
 import { FcGoogle } from "react-icons/fc";
 import Rotate from './Rotate';
+import { useUserContext } from '../Context/userContext';
+import { useNavigate } from 'react-router-dom';
 const Signupfree = () => {
+  const { signInWithGoogle } = useUserContext();
+  const redirect = useNavigate();
   return (
     <VStack
       style={{ color: "snow", padding: "3rem", backgroundColor: "#422a4c" }}
@@ -59,6 +63,7 @@ const Signupfree = () => {
               }}
             >
               <Button
+                onClick={signInWithGoogle}
                 p={'1.6rem'}
                 borderRadius={'6rem'}
                 style={{
@@ -79,6 +84,7 @@ const Signupfree = () => {
                 </span>
               </Button>
               <Button
+                onClick={signInWithGoogle}
                 p={'1.6rem'}
                 borderRadius={'6rem'}
                 style={{
@@ -107,6 +113,7 @@ const Signupfree = () => {
               }}
             >
               <Button
+                onClick={() => redirect('/signup')}
                 p={'1.6rem'}
                 borderRadius={'6rem'}
                 style={{
@@ -127,7 +134,7 @@ const Signupfree = () => {
               </Button>
             </HStack>
           </VStack>
-          <Text fontSize={'1rem'}  textAlign={'start'} width={'95%'}>
+          <Text fontSize={'1rem'} textAlign={'start'} width={'95%'}>
             By signing up, you agree to our{" "}
             <a href="#"
               style={{ borderBottom: '0.8px solid #e57cd8' }}

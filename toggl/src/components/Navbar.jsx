@@ -5,6 +5,7 @@ import styles from "./Navbar.module.css";
 import CareerDrop from "./Navbar/CareerDrop";
 import ProductDrop from "./Navbar/ProductDrop";
 import WhyDrop from "./Navbar/WhyDrop";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [prodcutdropdown, setProductdropDown] = useState(false);
   const [whydropDown, setWhydrop] = useState(false);
@@ -38,7 +39,7 @@ const Navbar = () => {
       justify={"space-between"}
     >
       <HStack className={styles.left} spacing={"1.8rem"} display="flex">
-        <a href="#">
+        <Link to="/">
           <svg viewBox="0 0 167 33" fill="#E57CD8">
             <defs>
               <mask id="prefix__a" fill="#fff">
@@ -86,7 +87,7 @@ const Navbar = () => {
               transform="translate(152.165 3.166)"
             ></path>
           </svg>
-        </a>
+        </Link>
         <Box>
           <div className={styles.navbar_options_div}>
             <div
@@ -101,7 +102,7 @@ const Navbar = () => {
           {/* <BsFillCaretUpFill/> */}
         </Box>
         <Box>
-          <Text>Pricing</Text>
+          <Text><Link to={'/price'}> Pricing</Link></Text>
         </Box>
         <Box>
           <div
@@ -138,7 +139,7 @@ const Navbar = () => {
         />
         <Box>
           <Text>
-            <a href="#">Log in</a>
+            <Link to={'/login'}>Log in</Link>
           </Text>
         </Box>
         <Box className={styles.roundBtn}>

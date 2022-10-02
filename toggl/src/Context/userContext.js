@@ -3,6 +3,11 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../firebase/config";
 import { useToast } from '@chakra-ui/react'
 import { useNavigate } from "react-router-dom";
+import { async } from "@firebase/util";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { loginApi, signupApi } from "../store/auth/auth.action";
+
 
 
 const userContext = createContext({});
@@ -10,6 +15,13 @@ const userContext = createContext({});
 export const useUserContext = () => useContext(userContext)
 
 export const UserContextProvider = ({ children }) => {
+
+    //#################### reducer logic ####################
+    const { token } = useSelector((store) => store.auth)
+    const dispatch = useDispatch()
+
+    //#################### reducer logic ####################
+
     const toast = useToast()
     const navigate = useNavigate()
 
@@ -32,12 +44,16 @@ export const UserContextProvider = ({ children }) => {
     // ############### Signup User ########################
 
     const signupUser = (email, password) => {
+
         SetLoading(true);
         createUserWithEmailAndPassword(auth, email, password).then(() => {
             return updateProfile(auth.currentUser, {
                 displayName: "Gautam"
             })
         }).then((res) => {
+            console.log(email, "inside firebase", password)
+            dispatch(signupApi({ email, password }))
+
             setUser(res);
             toast({
                 title: 'Account created.',
@@ -47,6 +63,8 @@ export const UserContextProvider = ({ children }) => {
                 isClosable: true,
                 position: 'top'
             })
+
+
             setTimeout(() => {
                 navigate("/login")
             }, 1000)
@@ -82,8 +100,11 @@ export const UserContextProvider = ({ children }) => {
                     isClosable: true,
                     position: 'top'
                 })
+
+                dispatch(loginApi({ email, password }))
+
                 setTimeout(() => {
-                    navigate("/")
+                    navigate("/timer")
                 }, 1000)
             })
             .catch((er) => {

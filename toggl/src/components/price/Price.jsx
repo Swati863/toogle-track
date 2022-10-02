@@ -1,13 +1,12 @@
 import React from "react";
-
 import { Box } from "@chakra-ui/react";
-
 import PriceComparison from "./PriceComparison";
 import PricesPlans from "./PricesPlans";
 import Navbar from "../Navbar";
 import TopNavbar from "../TopNavbar";
 import Signupfree from "./Signupfree";
-
+import Footer from "../Footer/Footer";
+import Faqs from "../../Faqs";
 const Price = () => {
   return (
     <>
@@ -23,8 +22,11 @@ const Price = () => {
         <Navbar />
         <PricesPlans />
         <PriceComparison />
+        <Faqs />
         <Signupfree />
+
       </Box>
+      <Footer />
     </>
   );
 };

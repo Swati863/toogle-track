@@ -7,9 +7,9 @@ const LogoButton = ({ logo, title }) => {
 
     return (
 
-        <Flex align="center" bg="white" color="black" p="3% 7%" borderRadius="3xl" onClick={signInWithGoogle} _hover={{ background: "#ffebd7" }}>
-            <Image w="25px" src={logo} />
-            <Text ml={3} fontWeight="bold">{title}</Text>
+        <Flex align="center" bg="white" color="black" p="2% 3%" borderRadius="3xl" onClick={signInWithGoogle} _hover={{ background: "#ffebd7" }}>
+            <Image w={["20px", "25px"]} src={logo} />
+            <Text ml={["7px", "10px"]} fontSize={["xs", "md"]} fontWeight="bold">{title}</Text>
         </Flex>
 
     )

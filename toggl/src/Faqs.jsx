@@ -1,8 +1,12 @@
+
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
 import { Box, Heading } from '@chakra-ui/react'
 import { getByDisplayValue } from '@testing-library/react'
 import React, { useState } from 'react'
 import style from './Faqs.module.css'
+
+
+
 export default function Faqs() {
   const [faq1, setFaq1] = useState(false)
 
@@ -62,66 +66,66 @@ export default function Faqs() {
     setFaq9(!faq9)
   }
   return (
-    <Box id={style.main_box}>
+    <Box id={style.main_box} mb={'-25px !important'}>
       <Box id={style.main_box_1}>
         <Heading className={style.head1} textAlign='center'>FAQS</Heading>
         <Box style={faq1 ? { backgroundColor: 'rgb(229, 124, 216)', color: 'black', height: 'auto' } : { backgroundColor: "transparent" }}>
           <hr />
           <Heading onClick={faq1Func} className={style.head} fontSize='25px'>Is Toggl Track free for an unlimited number of users? {faq1 ? <ChevronUpIcon /> : <ChevronDownIcon />}</Heading>
-          <p style={faq1 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft : '20px' , marginRight : '20px'} : { display: "none" }}>Toggl Track is free for teams of up to 5 members. </p>
+          <p style={faq1 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft: '20px', marginRight: '20px' } : { display: "none" }}>Toggl Track is free for teams of up to 5 members. </p>
         </Box>
 
 
         <Box style={faq2 ? { backgroundColor: 'rgb(229, 124, 216)', color: 'black', height: 'auto' } : { backgroundColor: "transparent" }}>
           <hr />
           <Heading onClick={faq2Func} className={style.head} fontSize='25px'>How is the subscription fee calculated for paid plans? {faq2 ? <ChevronUpIcon /> : <ChevronDownIcon />}</Heading>
-          <p style={faq2 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft : '20px' , marginRight : '20px' } : { display: "none" }}>You will be charged a monthly fee for each member of your team. For paid plans, this fee applies even if you have under 5 active users. You will not be charged for deactivated users. If you deactivate a user, all data associated with the deactivated user will be retained.</p>
+          <p style={faq2 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft: '20px', marginRight: '20px' } : { display: "none" }}>You will be charged a monthly fee for each member of your team. For paid plans, this fee applies even if you have under 5 active users. You will not be charged for deactivated users. If you deactivate a user, all data associated with the deactivated user will be retained.</p>
         </Box>
 
         <Box style={faq3 ? { backgroundColor: 'rgb(229, 124, 216)', color: 'black', height: 'auto' } : { backgroundColor: "transparent" }}>
           <hr />
           <Heading onClick={faq3Func} className={style.head} fontSize='25px'>You mentioned that Toggl Track is free for up to 5 users. If I’m on a paid plan, do I only need to pay for the 2th user? {faq3 ? <ChevronUpIcon /> : <ChevronDownIcon />}</Heading>
-          <p style={faq3 ? { display: "block", textAlign: 'left', paddingBottom: '30px' , marginLeft : '20px' , marginRight : '20px'} : { display: "none" }}>No, you will have to pay for all 6 members on your plan. We charge for every user because all users benefit from the extra features enabled by paid plans, not just the 6th. For example, all users can create Tasks or assign entries as Billable—all paid plan features.</p>
+          <p style={faq3 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft: '20px', marginRight: '20px' } : { display: "none" }}>No, you will have to pay for all 6 members on your plan. We charge for every user because all users benefit from the extra features enabled by paid plans, not just the 6th. For example, all users can create Tasks or assign entries as Billable—all paid plan features.</p>
         </Box>
-        
+
 
         <Box style={faq4 ? { backgroundColor: 'rgb(229, 124, 216)', color: 'black', height: 'auto' } : { backgroundColor: "transparent" }}>
           <hr />
           <Heading onClick={faq4Func} className={style.head} fontSize='25px'>Does Toggl Track offer discounts? {faq4 ? <ChevronUpIcon /> : <ChevronDownIcon />}</Heading>
-          <p style={faq4 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft : '20px' , marginRight : '20px' } : { display: "none" }}>Yes, Toggl Track offers discounts for nonprofits, students, and educational institutions. Visit this page to see if you can qualify. For those who do not qualify, Toggl Track offers a volume discount for large teams if you purchase a yearly subscription.</p>
+          <p style={faq4 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft: '20px', marginRight: '20px' } : { display: "none" }}>Yes, Toggl Track offers discounts for nonprofits, students, and educational institutions. Visit this page to see if you can qualify. For those who do not qualify, Toggl Track offers a volume discount for large teams if you purchase a yearly subscription.</p>
         </Box>
 
 
         <Box style={faq5 ? { backgroundColor: 'rgb(229, 124, 216)', color: 'black', height: 'auto' } : { backgroundColor: "transparent" }}>
           <hr />
           <Heading onClick={faq5Func} className={style.head} fontSize='25px'>How is the subscription fee calculated for paid plans? {faq5 ? <ChevronUpIcon /> : <ChevronDownIcon />}</Heading>
-          <p style={faq5 ? { display: "block", textAlign: 'left', paddingBottom: '30px' , marginLeft : '20px' , marginRight : '20px'} : { display: "none" }}>You will be charged a monthly fee for each member of your team. For paid plans, this fee applies even if you have under 5 active users. You will not be charged for deactivated users. If you deactivate a user, all data associated with the deactivated user will be retained.</p>
+          <p style={faq5 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft: '20px', marginRight: '20px' } : { display: "none" }}>You will be charged a monthly fee for each member of your team. For paid plans, this fee applies even if you have under 5 active users. You will not be charged for deactivated users. If you deactivate a user, all data associated with the deactivated user will be retained.</p>
         </Box>
 
         <Box style={faq6 ? { backgroundColor: 'rgb(229, 124, 216)', color: 'black', height: 'auto' } : { backgroundColor: "transparent" }}>
           <hr />
           <Heading onClick={faq6Func} className={style.head} fontSize='25px'>You mentioned that Toggl Track is free for up to 5 users. If I’m on a paid plan, do I only need to pay for the 2th user? {faq6 ? <ChevronUpIcon /> : <ChevronDownIcon />}</Heading>
-          <p style={faq6 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft : '20px' , marginRight : '20px' } : { display: "none" }}>No, you will have to pay for all 6 members on your plan. We charge for every user because all users benefit from the extra features enabled by paid plans, not just the 6th. For example, all users can create Tasks or assign entries as Billable—all paid plan features.</p>
+          <p style={faq6 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft: '20px', marginRight: '20px' } : { display: "none" }}>No, you will have to pay for all 6 members on your plan. We charge for every user because all users benefit from the extra features enabled by paid plans, not just the 6th. For example, all users can create Tasks or assign entries as Billable—all paid plan features.</p>
         </Box>
 
 
         <Box style={faq7 ? { backgroundColor: 'rgb(229, 124, 216)', color: 'black', height: 'auto' } : { backgroundColor: "transparent" }}>
           <hr />
           <Heading onClick={faq7Func} className={style.head} fontSize='25px'>Is Toggl Track free for an unlimited number of users? {faq7 ? <ChevronUpIcon /> : <ChevronDownIcon />}</Heading>
-          <p style={faq7 ? { display: "block", textAlign: 'left', paddingBottom: '30px' , marginLeft : '20px' , marginRight : '20px'} : { display: "none" }}>Toggl Track is free for teams of up to 5 members. </p>
+          <p style={faq7 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft: '20px', marginRight: '20px' } : { display: "none" }}>Toggl Track is free for teams of up to 5 members. </p>
         </Box>
 
 
         <Box style={faq8 ? { backgroundColor: 'rgb(229, 124, 216)', color: 'black', height: 'auto' } : { backgroundColor: "transparent" }}>
           <hr />
           <Heading onClick={faq8Func} className={style.head} fontSize='25px'>How is the subscription fee calculated for paid plans? {faq8 ? <ChevronUpIcon /> : <ChevronDownIcon />}</Heading>
-          <p style={faq8 ? { display: "block", textAlign: 'left', paddingBottom: '30px' , marginLeft : '20px' , marginRight : '20px'} : { display: "none" }}>You will be charged a monthly fee for each member of your team. For paid plans, this fee applies even if you have under 5 active users. You will not be charged for deactivated users. If you deactivate a user, all data associated with the deactivated user will be retained.</p>
+          <p style={faq8 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft: '20px', marginRight: '20px' } : { display: "none" }}>You will be charged a monthly fee for each member of your team. For paid plans, this fee applies even if you have under 5 active users. You will not be charged for deactivated users. If you deactivate a user, all data associated with the deactivated user will be retained.</p>
         </Box>
 
         <Box style={faq9 ? { backgroundColor: 'rgb(229, 124, 216)', color: 'black', height: 'auto' } : { backgroundColor: "transparent" }}>
           <hr />
           <Heading onClick={faq9Func} className={style.head} fontSize='25px'>You mentioned that Toggl Track is free for up to 5 users. If I’m on a paid plan, do I only need to pay for the 2th user? {faq9 ? <ChevronUpIcon /> : <ChevronDownIcon />}</Heading>
-          <p style={faq9 ? { display: "block", textAlign: 'left', paddingBottom: '30px' , marginLeft : '20px' , marginRight : '20px'} : { display: "none" }}>No, you will have to pay for all 6 members on your plan. We charge for every user because all users benefit from the extra features enabled by paid plans, not just the 6th. For example, all users can create Tasks or assign entries as Billable—all paid plan features.</p>
+          <p style={faq9 ? { display: "block", textAlign: 'left', paddingBottom: '30px', marginLeft: '20px', marginRight: '20px' } : { display: "none" }}>No, you will have to pay for all 6 members on your plan. We charge for every user because all users benefit from the extra features enabled by paid plans, not just the 6th. For example, all users can create Tasks or assign entries as Billable—all paid plan features.</p>
         </Box>
         {/* <Heading className={style.head} fontSize='25px'>You mentioned that Toggl Track is free for up to 5 users. If I’m on a paid plan, do I only need to pay for the 2th user? <ChevronDownIcon /></Heading>
         <hr />

@@ -1,10 +1,15 @@
 import { FormControl, Button, FormErrorMessage, HStack, Input, InputGroup, InputRightElement, Text, VStack, Box, background } from '@chakra-ui/react'
 import React, { useRef, useState } from 'react'
 import { BsFillEyeFill, BsFillEyeSlashFill, BsGoogle, BsApple } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
+import { useUserContext } from '../Context/userContext';
 import styles from './HeaderLogin.module.css'
+import Form from './SignupForm';
 
 const HeaderLogin = () => {
+    const { signInWithGoogle } = useUserContext()
     const [input, setInput] = useState('');
+    const redirect = useNavigate();
     const [show, setShow] = React.useState(false)
     const handleClick = () => setShow(!show)
     const isError = useRef(false);;
@@ -62,14 +67,15 @@ const HeaderLogin = () => {
                                 <BsFillEyeFill onClick={handleClick} cursor={'pointer'} fill={'#7e6e85'} />
                             ) : (
                                 <BsFillEyeSlashFill onClick={handleClick} cursor={'pointer'} fill={'#7e6e85'} />
-                            ) 
+                            )
                             }
                         </InputRightElement>
                     </InputGroup>
                 </FormControl>
             </div >
+
             <HStack w='100%' justify={'space-between'} marginTop={'2.5rem !important'}>
-                <Button p='1.8rem 2.8rem' fontWeight={'700'} _hover={{
+                <Button p='1.8rem 2.8rem' onClick={() => redirect('/signup')} fontWeight={'700'} _hover={{
                     background: '#7e6e85'
                 }} color='white' background={'#e57cd8'} borderRadius={'3rem'} >Sign up with email</Button>
                 <HStack>
@@ -84,6 +90,7 @@ const HeaderLogin = () => {
                         cursor: 'pointer',
                         fontSize: '1.7rem'
                     }}
+                        onClick={signInWithGoogle}
                         _hover={{
                             background: '#FCE5D8',
                         }}
@@ -99,6 +106,7 @@ const HeaderLogin = () => {
                         cursor: 'pointer',
                         fontSize: '1.7rem'
                     }}
+                        onClick={signInWithGoogle}
                         _hover={{
                             background: '#FCE5D8',
                         }}

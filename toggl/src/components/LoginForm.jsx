@@ -98,7 +98,7 @@ const LoginForm = ({ title }) => {
                                         />
                                         <InputRightElement width='4.5rem'  >
                                             <Center fontSize="30px" pt={2} bg="none" onClick={handleClick}>
-                                                {show ? <BiHide color='white' /> : <BiShow color='white' bg="white" />}
+                                                {show ? <BiHide color='black' /> : <BiShow color='black' bg="black" />}
                                             </Center>
                                         </InputRightElement>
                                     </InputGroup>
