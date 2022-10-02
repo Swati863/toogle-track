@@ -12,26 +12,28 @@ import Signupfree from '../components/Signupfree'
 import Trusted from '../components/Trusted'
 import Footer from '../components/Footer/Footer'
 import TopNavbar from '../components/TopNavbar'
-
+import { useEffect } from 'react'
+import { useRef } from 'react'
 
 
 
 const Home = () => {
+  
   return (
     <>
-      <TopNavbar/>
-    <VStack>
-      <Navbar />
-      <Header />
-      <Trusted />
-      <Profitablity />
-      <LoveToggl />
-      <Million />
-      <Companies />
-      <RightFeature />
-      <Signupfree />
-      <Footer/>
-    </VStack>
+      <TopNavbar />
+      <VStack>
+        <Navbar/>
+        <Header />
+        <Trusted />
+        <Profitablity />
+        <LoveToggl />
+        <Million />
+        <Companies />
+        <RightFeature />
+        <Signupfree />
+        <Footer />
+      </VStack>
     </>
   );
 };

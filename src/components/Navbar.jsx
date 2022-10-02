@@ -1,5 +1,6 @@
-import { Box, Divider, HStack, Text } from "@chakra-ui/react";
+import { Box, Divider, HStack, Text } from "@chakra-ui/react"; 
 import React, { useState } from "react";
+import { FaBars } from "react-icons/fa";
 import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
 import styles from "./Navbar.module.css";
 import CareerDrop from "./Navbar/CareerDrop";
@@ -39,6 +40,7 @@ const Navbar = () => {
       justify={"space-between"}
     >
       <HStack className={styles.left} spacing={"1.8rem"} display="flex">
+
         <Link to="/">
           <svg viewBox="0 0 167 33" fill="#E57CD8">
             <defs>
@@ -88,50 +90,49 @@ const Navbar = () => {
             ></path>
           </svg>
         </Link>
-        <Box>
-          <div className={styles.navbar_options_div}>
-            <div
-              onMouseOver={handlemouseHoverProd}
-              className={styles.navbar_options_softwareDown}
-            >
-              <Text>Product</Text>
-            </div>
-          </div>
-
-          <BsFillCaretDownFill />
-          {/* <BsFillCaretUpFill/> */}
+        <Box onClick={handlemouseHoverProd}>
+          <Text>Product</Text>
+          {!prodcutdropdown ? <BsFillCaretDownFill /> : <BsFillCaretUpFill />}
         </Box>
         <Box>
           <Text><Link to={'/price'}> Pricing</Link></Text>
         </Box>
-        <Box>
+        <Box >
           <div
-            onMouseOver={handlemouseHoverWhy}
+            onClick={handlemouseHoverWhy}
             className={styles.navbar_options_softwareDown}
           >
             <Text>Why Track?</Text>
           </div>
 
-          <BsFillCaretDownFill />
+          {!whydropDown ? <BsFillCaretDownFill /> : <BsFillCaretUpFill />}
         </Box>
         <Box>
           <div
-            onMouseOver={handlemouseHoverCareer}
+            onClick={handlemouseHoverCareer}
             className={styles.navbar_options_softwareDown}
           >
             <Text>Careers</Text>
           </div>
 
-          <BsFillCaretDownFill />
+          {!careerdropDown ? <BsFillCaretDownFill /> : <BsFillCaretUpFill />}
         </Box>
       </HStack>
       <HStack spacing={"1.8rem"} className={styles.right} display="flex">
+        <Box display={['block', 'block', 'block', 'none !important']} >
+          <FaBars style={{
+            width: '2rem',
+            cursor: 'pointer',
+            height: '1.6rem'
+          }} />
+        </Box>
         <Box>
           <Text>
             <a href="#">Book a demo</a>
           </Text>
         </Box>
         <Divider
+
           orientation="vertical"
           height="32px"
           border={"1.5px solid white"}
@@ -145,6 +146,7 @@ const Navbar = () => {
         <Box className={styles.roundBtn}>
           <a href="#">Try for free</a>
         </Box>
+
       </HStack>
       {prodcutdropdown && <ProductDrop />}
       {whydropDown && <WhyDrop />}
