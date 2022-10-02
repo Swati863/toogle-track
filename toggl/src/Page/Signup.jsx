@@ -1,24 +1,25 @@
 import { Box, Flex, Heading, Image, Input, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, redirect, useNavigate } from 'react-router-dom'
 import Form from '../components/SignupForm'
 import LogoButton from '../components/LogoButton'
 import { useUserContext } from '../Context/userContext'
 import Styles from "./Signup.module.css"
+import Rotate from '../components/Rotate'
 
 const Signup = () => {
 
     const { user } = useUserContext();
-
+    const redirect = useNavigate()
 
 
     return (
-        <Box bg="#2C1338" >
-            <Box p={12}>
+        <Box bg="rgb(65,42,76)" pb={10} >
+            <Box p={12} onClick={() => redirect("/")}>
                 <Image w="13%" src="https://toggl.com/blog/wp-content/uploads/2020/09/toggl-track_logotype_horizontal_pink_rgb-e1599116263835.png" />
             </Box>
             <Box textAlign="left" w="80%" m="auto" color="white">
-                <Heading size="2xl">Sign up for a <span style={{ color: "#E57CD8" }}>𝙛𝙧𝙚𝙚</span>  Toggl Track account</Heading>
+                <Heading size="2xl">Sign up for a <span style={{ color: "#E57CD8" }}><Rotate Color={"#E57CD8"} word={"free"} /></span>  Toggl Track account</Heading>
 
                 <Text fontSize="xl" mt={10}>All plans come with a free, 30-day trial of Toggl Track Premium—no credit card required.
                     <br />
@@ -29,8 +30,8 @@ const Signup = () => {
                     <NavLink style={{ color: "#E57CD8", marginLeft: "5px", textDecoration: "underline" }} to="/login" >Log in here.</NavLink>
                 </Text>
             </Box>
-            <SimpleGrid columns={[1, 2]} spacing={10} w="80%" m="auto" my={14} color="white">
-                <Box bg="#2C1118" textAlign="left" p={5} py={14} >
+            <SimpleGrid columns={[1, 2]} spacing={10} w={["90%", "80%"]} m="auto" my={14} color="white">
+                <Box bg="rgb(44, 19, 56)" textAlign="left" p={5} py={14} >
                     <Flex justify="space-around">
                         <LogoButton logo="https://img.icons8.com/color/452/google-logo.png" title="Sign up via google" />
                         <LogoButton logo="https://cdn.iconscout.com/icon/free/png-256/apple-853-675472.png" title="Sign up via Apple" />

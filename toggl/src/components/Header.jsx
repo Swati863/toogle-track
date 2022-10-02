@@ -1,9 +1,10 @@
 import { Box, HStack, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HeaderLogin from './HeaderLogin'
 import styles from './Header.module.css'
 import Standup from './Standup'
 import Rotate from './Rotate'
+import Form from './SignupForm'
 
 const Header = () => {
   return (
@@ -21,11 +22,12 @@ const Header = () => {
             Bill accurately, measure profitability, manage workloads — and spend less time on it all.
           </Text>
           <HeaderLogin />
+          {/* <Form /> */}
           <Text color='#FCE5D8' fontSize={'1rem'} w={'100%'}>By signing up, you agree to our <a className={styles.anch} href="#">terms of service</a> , <a className={styles.anch} href="#">privacy policy</a> and to receiving marketing communication from Toggl Track. You can opt out anytime.</Text>
         </VStack>
         <VStack color='#FCE5D8' w={'30rem'}>
           <Standup />
-          <Text mt={'4.5rem !important'} w='23rem' textAlign={'start'} fontSize={'1.5rem'}> &nbsp;“I love the ease of just clocking in and out with <Rotate Color={'#e57cd8'} word={'just'} /> <Rotate Color={'#e57cd8'} word={'one'}  /> <Rotate Color={'#e57cd8'} word={'click!'} />”</Text>
+          <Text mt={'4.5rem !important'} w='23rem' textAlign={'start'} fontSize={'1.5rem'}> &nbsp;“I love the ease of just clocking in and out with <Rotate Color={'#e57cd8'} word={'just'} /> <Rotate Color={'#e57cd8'} word={'one'} /> <Rotate Color={'#e57cd8'} word={'click!'} />”</Text>
           <Text fontSize={'1.3rem'} width={'22.4rem'} textAlign={'end'}>— Quelani P.</Text>
         </VStack>
       </HStack>

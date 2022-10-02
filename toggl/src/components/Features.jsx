@@ -2,9 +2,14 @@ import React, { useRef, useState } from "react";
 import { FaGoogle, FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { GoMail } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
+import { useUserContext } from "../Context/userContext";
+import Footer from "./Footer/Footer";
 
 function Features() {
   //   const { screen } = useScreenWidth();
+  const { signInWithGoogle } = useUserContext();
+  const redirect = useNavigate()
 
   return (
     <div>
@@ -857,10 +862,12 @@ function Features() {
                       display: "grid",
                       gridTemplateColumns: "1fr 1fr",
                       alignItems: "center",
-                      gap: "1rem",
+                      gap: "1.5rem",
+
                     }}
                   >
                     <button
+                      onClick={signInWithGoogle}
                       style={{
                         display: "flex",
                         padding: "0.75rem 1.5rem",
@@ -869,12 +876,13 @@ function Features() {
                         borderRadius: "25px",
                         margin: "1rem 0",
                         alignItems: "center",
-                        width: "100%",
+                        width: "110%",
+
                       }}
                     >
                       <span>
                         <FcGoogle
-                          style={{ fontSize: "1.3rem", marginRight: "1rem" }}
+                          style={{ fontSize: "1.3rem", marginRight: "0.5rem" }}
                         />
                       </span>{" "}
                       <span style={{ fontSize: "1rem" }}>
@@ -882,6 +890,7 @@ function Features() {
                       </span>
                     </button>
                     <button
+                      onClick={signInWithGoogle}
                       style={{
                         display: "flex",
                         padding: "0.75rem 1.5rem",
@@ -890,12 +899,12 @@ function Features() {
                         borderRadius: "25px",
                         margin: "1rem 0",
                         alignItems: "center",
-                        width: "100%",
+                        width: "110%",
                       }}
                     >
                       <span>
                         <FaApple
-                          style={{ fontSize: "1.3rem", marginRight: "1rem" }}
+                          style={{ fontSize: "1.3rem", marginRight: "0.5rem" }}
                         />
                       </span>{" "}
                       <span style={{ fontSize: "1rem" }}>
@@ -911,6 +920,7 @@ function Features() {
                     }}
                   >
                     <button
+                      onClick={() => redirect("/signup")}
                       style={{
                         display: "flex",
                         padding: "0.75rem 1.5rem",
@@ -999,6 +1009,7 @@ function Features() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

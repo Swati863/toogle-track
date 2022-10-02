@@ -51,6 +51,8 @@ const Form = ({ title }) => {
                                         id="email"
                                         name="email"
                                         type="email"
+                                        bg="white"
+                                        color="black"
                                         variant='outline'
                                         size='lg'
                                         border="2.5px solid black"
@@ -77,6 +79,8 @@ const Form = ({ title }) => {
                                             name="password"
                                             type={show ? 'text' : 'password'}
                                             size='lg'
+                                            bg="white"
+                                            color="black"
                                             border="2.5px solid black"
                                             _hover={{ background: "#ffebd7", color: "black" }}
                                             validate={(value) => {
@@ -91,7 +95,7 @@ const Form = ({ title }) => {
                                         />
                                         <InputRightElement width='4.5rem'  >
                                             <Center fontSize="30px" pt={2} bg="none" onClick={handleClick}>
-                                                {show ? <BiHide color='white' /> : <BiShow color='white' bg="white" />}
+                                                {show ? <BiHide color='black' /> : <BiShow color='black' bg="black" />}
                                             </Center>
                                         </InputRightElement>
                                     </InputGroup>
