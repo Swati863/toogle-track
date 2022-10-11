@@ -39,6 +39,7 @@ https://toggl-time-tracking.vercel.app/
 
 <h1>Team Members </h1>
 <li>Swati Kushwaha</li>
+<li>Aman Yadav</li>
 <li>Gautam Kumar</li>
 <li>Barsa Rani Ojha</li>
 <li>Lokesh Ahire</li>
